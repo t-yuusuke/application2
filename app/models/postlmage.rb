@@ -1,0 +1,3 @@
+class Postlmage < ApplicationRecord
+  
+end
