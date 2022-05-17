@@ -12,6 +12,7 @@ class PostlmagesController < ApplicationController
   end  
 
   def index
+    @postlmages = Postlmage.all
   end
 
   def show
