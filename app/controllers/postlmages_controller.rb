@@ -16,6 +16,7 @@ class PostlmagesController < ApplicationController
   end
 
   def show
+    @postlmage = Postlmage.find(params[:id])
   end
   
   def destroy
