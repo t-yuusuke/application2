@@ -9,11 +9,12 @@
 <% @postlmages.each do |postlmage| %>
 <div>
   <%= link_to postlmage_path(postlmage.id) do %>
-  <%= image_tag postlmage.get_image %>
+   <%= image_tag postlmage.get_image %>
   <% end %>
   <p>投稿ユーザー画像:<%= image_tag postlmage.user.get_profile_image(100,100) %></p>
   <p>ショップ名:<%= postlmage.shop_name %></p>
   <p>説明:<%= postlmage.caption %></p>
   <p>ユーザーネーム:<%= postlmage.user.name %></p>
+  <p><%= link_to "#{postlmage.post_comments.count} コメント", postlmage_path(postlmage.id) %></p>
 </div>
 <% end %>

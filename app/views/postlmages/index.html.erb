@@ -7,5 +7,6 @@
   <p>ショップ名:<%= postlmage.shop_name %></p>
   <p>説明:<%= postlmage.caption %></p>
   <p>ユーザーネーム:<%= postlmage.user.name %></p>
+  <p><%= link_to "#{postlmage.post_comments.count} コメント", postlmage_path(postlmage.id) %></p>
 </div>
 <% end %>
